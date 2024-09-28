@@ -1,0 +1,39 @@
+@model TestZen.Models.User
+
+<div class="container mt-5">
+    <h2 class="text-center text-custom">Register</h2>
+    <div class="d-flex justify-content-center">
+        <form asp-action="Register" method="post" class="mt-4 col-md-4">
+            <div class="mb-3">
+                <label asp-for="fullname" class="form-label">Full Name</label>
+                <input asp-for="fullname" class="form-control" />
+                <span asp-validation-for="fullname" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="email" class="form-label">Email</label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="phone" class="form-label">Phone</label>
+                <input asp-for="phone" class="form-control" />
+                <span asp-validation-for="phone" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="address" class="form-label">Address</label>
+                <input asp-for="address" class="form-control" />
+                <span asp-validation-for="address" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="password" class="form-label">Password</label>
+                <input asp-for="password" type="password" class="form-control" />
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-custom w-100">Register</button>
+        </form>
+    </div>
+    <div class="text-center mt-3">
+        <p>Already have an account? <a href="@Url.Action("Login", "Account")">Login here</a>.</p>
+    </div>
+</div>
+
